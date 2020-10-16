@@ -1,0 +1,76 @@
+#access{
+    width: 100%;
+    background-color:#A193861F;
+    position: relative;
+    height: 76rem;
+
+    @include sp {
+        width: 100%;
+        height: 71rem;
+        margin: 0 auto;
+    }
+
+}
+
+#access .title{
+    padding-left: 10rem;
+@include sp {
+    padding: 60px 0px;
+    padding-left:2rem ;
+}
+
+}
+
+
+
+
+.access_wrap {
+    background-color:#D0C5BA ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include sp {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+}
+.map{
+    width: 60%;
+    @include sp{
+        width: 100%;
+            iframe{
+                height: 23.1rem;
+    }
+    
+    }
+
+}
+
+
+
+
+
+.access_content{
+    margin-top: 10.1rem;
+    margin-left: 10.4em;
+
+    @include sp{
+        margin:3rem ;
+
+    }
+
+
+    
+    &_name{
+        font-size: 2.4rem;
+        color: #00000038;
+        padding-bottom: 30px;
+    }
+    &_text{
+        font-size: 1.6rem;
+        color: white;
+        line-height: 40px;
+       
+    }
+
+}
