@@ -10,8 +10,9 @@
 .menu_wrap{
     display: flex;
     justify-content: space-between;
-    @include sp {
+    @include tab {
         flex-direction: column;
+        
     }
     
     
@@ -24,7 +25,7 @@
     background-color: white;
     background-size: cover;
 
-    @include sp {
+    @include tab {
         width: 100%;
        
     }
@@ -36,11 +37,11 @@
     width: 274px;
     margin:0 auto;
     overflow: hidden;
-    @include sp {
+    @include tab {
         width: 100%;
     }
     img{
-        @include sp {
+        @include tab {
             width: 33.5rem;
             height: 27.1rem;
         }
@@ -64,14 +65,14 @@
         text-align: center;
         font-size: 3rem;
         font-family: normal normal normal 30px/36px Roboto Mono for Powerline;;
-        @include sp{
+        @include tab{
             text-align: left;
         }
     }
     &__intro{
         
         font-size: 1.6rem;
-        @include sp{
+        @include tab{
             width: 29.8rem;
             margin: 0 auto;
             padding-left:10px;
@@ -86,7 +87,7 @@
         top: 98%;
         left: 50%;
 
-        @include sp{
+        @include tab{
             padding-bottom:55px ;
             left:60%;
         }

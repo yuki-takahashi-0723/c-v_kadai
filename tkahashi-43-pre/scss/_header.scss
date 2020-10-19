@@ -1,12 +1,13 @@
 header {
     display: flex;
     justify-content: left;
+    align-items: center;
     
     width: 100%;
     padding: 66px 77px;
      position: absolute;
       z-index: 11;
-    @include sp{
+    @include tab{
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -20,19 +21,20 @@ header {
     font-size: 3.8rem;
     font-weight: bold;
     min-width: 30rem;
-    @include sp{
+    @include tab{
+        min-width: 90%;
         font-size: 2.2rem;
     }
     
 }
 
 
-
 nav ul {
     
     display: flex;
     justify-content: space-between;
-    @include sp{
+    text-align: center;
+    @include tab{
         display: none;
     }
 
@@ -50,7 +52,7 @@ nav ul {
 
 .ham{
     display: none;
-    @include sp{
+    @include tab{
         padding-top:4px ;
         width: 16px;
         :nth-child(3){

@@ -7,7 +7,7 @@
 
 .border{
     margin-top: 16.4em;
-    @include  sp {
+    @include  tab {
         margin-top:6rem;
     }
     display: inline-block;
@@ -26,7 +26,7 @@
     justify-content: space-between;
     padding-top:83px ;
   
-    @include sp {
+    @include tab {
         flex-direction: column-reverse;
     }
 
@@ -37,7 +37,7 @@
         white-space: nowrap;
         display: flex;
         justify-content: space-between;
-        @include sp {
+        @include tab {
             width: 100%;
         }
         
@@ -48,14 +48,14 @@
         &__logo{
             font-size: 32px;
             color:#7070704D ;
-            @include sp {
+            @include tab {
                 font-size: 18px;
             }
 
         }
 
         &__sns{
-            @include sp {
+            @include tab{
                 font-size: 5.5px;
             }
 

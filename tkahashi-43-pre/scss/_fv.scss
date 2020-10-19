@@ -12,6 +12,7 @@
      }
 
      .fv_img img{
+         height: 100vh;
         @include sp {
             height: 59.7rem;
         }
@@ -26,11 +27,11 @@
     .fv-wrap{
         width: 30%;
         height: 214px;  
-        transform: translate(8.3%, 30rem);
+        transform: translate(10.7rem, 30rem);
         white-space: nowrap;
         margin: 0 ;
-        @include sp {
-            transform: translate(5rem,90%);
+        @include tab {
+            transform: translate(6rem,90%);
             position: relative;
         }
         
@@ -49,7 +50,7 @@
             color: #000000;
             opacity: 1;
             
-            @include sp {
+            @include tab {
                 font-size: 2.3rem;
                 color: white;
                 position: absolute;
@@ -68,7 +69,7 @@
             letter-spacing: 3.8px;
             color: #000000;
             opacity: 1;
-            @include sp{
+            @include tab{
                 font-size: 2.8rem;
                 color: white;
                 position: absolute;

@@ -11,17 +11,15 @@
 }
 
 @mixin tab {
-    @media screen and (max-width: 959px){
+    @media screen and (max-width: 750px){
             @content;
     }
 }
-@mixin sp {
-    @media screen and (max-width: 600px){
-            @content ;       
-    }    
-
-            
-}
+ @mixin sp {
+     @media screen and (max-width: 600px){
+             @content ;       
+     }           
+ }
 
 
 
@@ -51,8 +49,8 @@ html{
 #concept,#menu,#footer{
     width: 100% - 7.9% * 2;
     margin: 0 auto;
-    @include sp {
-        width: 33.5rem ;
+    @include tab {
+        width: 89% ;
     }
    
 }
@@ -66,7 +64,7 @@ html{
         align-items: center;
         font-size: 1.8rem;
 
-        @include sp{
+        @include tab{
             padding: 60px 0px;
         }
 
@@ -77,7 +75,7 @@ html{
         content: "";
         border-top: 1px solid ;
         width: 8.8em;
-        @include sp {
+        @include tab {
             width: 4.4rem;
         }
 
