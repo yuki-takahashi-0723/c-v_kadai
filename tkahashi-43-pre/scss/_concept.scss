@@ -1,0 +1,121 @@
+#concept {
+        width: 100%;
+        background: linear-gradient(to bottom, #A193861F 0%, #A193861F 42%, #A1938689 42%, #A1938689 100%);
+        @include tab{
+            background: linear-gradient(to bottom, #A193861F 0%, #A193861F 35%, #A1938689 35%, #A1938689 100%);
+        }
+
+
+
+}
+.inner{
+    width: 100% - 7.9% * 2;
+    margin: 0 auto;
+    .title{
+        @include tab{
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+    }
+
+
+
+
+
+
+}
+.inner span{
+    height: 41.3rem;
+@include tab{
+    height:16.4rem ;
+}
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    @include tab{
+       justify-content: center;
+    }
+    .concept_item_1{
+        width: 62.5%;
+        background-image: url(../img/andrew-neel-f480QIEvwGI-unsplash@2x.png);
+        background-size:contain;
+        background-repeat:no-repeat; 
+       
+        @include tab {
+            width: 16.4rem;
+            height: 20.5rem;
+            background-size: cover;
+            background-position: right -30px top 0px;
+        }
+        
+    }
+    .concept_item_2{
+        
+        width: 36%;
+        margin-left:1.1rem ;
+        background-image: url(../img/joel-mott-mNYL0surXh8-unsplash@2x.png);
+        background-size:contain;
+        background-repeat:no-repeat; 
+
+        @include tab {
+            background-image: none;
+            background-image: url(../img/joel-mott-mNYL0surXh8-unsplash.png);
+            width:16.4rem ;
+            height: 20.5rem;
+            background-size: cover;
+            background-position: right -5px top 0px;
+            
+        }
+    }
+
+}
+
+.inner section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    padding: 7rem 0;
+    @include tab{
+        width: 100%;
+        padding-top: 5rem;
+         flex-direction: column;
+         
+    }
+
+
+  .concept-logo{
+      
+      font-family: ヒラギノ明朝 Pro;
+       font-size: 4rem;
+       margin-right: 80px;
+       padding-bottom:5rem ;
+       white-space: nowrap;
+       @include tab {
+        margin: 0 auto;
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+       
+
+    }
+    .concept-text{
+        width: 42.2rem;
+        height: 13.3rem;
+        font-family: ヒラギノ角ゴ Pro;
+       font-size: 1.6rem;
+       @include tab{
+           width: 100%;
+       }
+      
+       
+    }
+
+}
+
+
+
+
+

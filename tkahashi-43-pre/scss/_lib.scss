@@ -1,0 +1,98 @@
+/////////////////////
+////              ///
+///     mixin   ///
+///               ///
+////////////////////
+
+@mixin pc  {
+    @media screen and (min-width: 960px){
+            @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 750px){
+            @content;
+    }
+}
+ @mixin sp {
+     @media screen and (max-width: 600px){
+             @content ;       
+     }           
+ }
+
+
+
+
+
+
+/////////////////////
+////              ///
+///     共通   ///
+///               ///
+////////////////////
+.wrap{
+    overflow: hidden;
+}
+
+
+html{
+     font-size: 62.5%; //10px 
+}
+
+
+    
+
+    
+
+
+#concept,#menu,#footer{
+    width: 100% - 7.9% * 2;
+    margin: 0 auto;
+    @include tab {
+        width: 89% ;
+    }
+   
+}
+
+
+.title{
+        padding: 260px 0px;
+        padding-bottom:11px ;
+        display:flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 1.8rem;
+
+        @include tab{
+            padding: 60px 0px;
+        }
+
+
+        
+        &:after{
+            display: inline-block;
+        content: "";
+        border-top: 1px solid ;
+        width: 8.8em;
+        @include tab {
+            width: 4.4rem;
+        }
+
+
+        margin-left: 2rem;
+        }
+    }
+
+p{
+    line-height: normal;
+}
+
+
+
+
+
+
+
+
+

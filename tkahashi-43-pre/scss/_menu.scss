@@ -1,0 +1,111 @@
+ #menu{
+    &__img{
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+}
+.menu_wrap{
+    display: flex;
+    justify-content: space-between;
+    @include tab {
+        flex-direction: column;
+        
+    }
+    
+    
+}
+
+
+.menu-item {
+     width: 25%;
+    height: 62.5rem;
+    background-color: white;
+    background-size: cover;
+
+    @include tab {
+        width: 100%;
+       
+    }
+
+
+}
+
+.menu__img{
+    width: 274px;
+    margin:0 auto;
+    overflow: hidden;
+    @include tab {
+        width: 100%;
+    }
+    img{
+        @include tab {
+            width: 33.5rem;
+            height: 27.1rem;
+        }
+    }
+}
+
+.menu__img img:hover{
+    transform:scale(1.4) rotate(20deg);
+}
+
+
+
+
+
+.menu__content{
+   position: relative;
+   min-height: 210px;
+    &__title{
+        white-space: nowrap;
+        padding:3.2rem ;
+        text-align: center;
+        font-size: 3rem;
+        font-family: normal normal normal 30px/36px Roboto Mono for Powerline;;
+        @include tab{
+            text-align: left;
+        }
+    }
+    &__intro{
+        
+        font-size: 1.6rem;
+        @include tab{
+            width: 29.8rem;
+            margin: 0 auto;
+            padding-left:10px;
+        }
+        
+    }
+    &__price{
+        font-size: 1.6rem;
+        padding-top: 34px;
+        padding-bottom: 70px;
+        position: absolute;
+        top: 98%;
+        left: 50%;
+
+        @include tab{
+            padding-bottom:55px ;
+            left:60%;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

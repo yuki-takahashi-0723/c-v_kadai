@@ -1,0 +1,88 @@
+.first-view{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+     @include sp{
+         height: 59.7rem;
+         transform: translate(13rem);
+         
+     }
+
+     .fv_img img{
+         height: 100vh;
+        @include sp {
+            height: 59.7rem;
+        }
+     }
+     
+     
+    
+ 
+
+   
+    
+    .fv-wrap{
+        width: 30%;
+        height: 214px;  
+        transform: translate(10.7rem, 30rem);
+        white-space: nowrap;
+        margin: 0 ;
+        @include tab {
+            transform: translate(6rem,90%);
+            position: relative;
+        }
+        
+        
+
+
+
+        
+        .fv-catch_ja{
+           margin: 48px ;
+            margin-top: 0;  //打ち消し
+            width: 32.6rem;
+            height: 48px;
+            font: normal normal normal 38px/65px Hiragino Mincho Pro;
+            letter-spacing: 3.8px;
+            color: #000000;
+            opacity: 1;
+            
+            @include tab {
+                font-size: 2.3rem;
+                color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+
+
+            }
+        } 
+        .fv-catch_en{
+            width: 39rem;
+            height: 128px;
+            font: normal normal normal 38px/128px Zapfino;
+            letter-spacing: 3.8px;
+            color: #000000;
+            opacity: 1;
+            @include tab{
+                font-size: 2.8rem;
+                color: white;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            
+
+        }  
+    }
+
+
+
+
+
+
