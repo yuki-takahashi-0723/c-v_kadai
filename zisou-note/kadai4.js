@@ -2,7 +2,7 @@
 
 const items =[
     {n:100},
-    { a : {b : ['abc']} , c : {'100':['foobar']}}
+    { a : {b : ['abc']} , c : {'100':'foobar'}}
     
 ]
 
