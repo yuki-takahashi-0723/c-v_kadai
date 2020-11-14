@@ -1,57 +1,70 @@
-// 課題06-1.
-// 上記で登場したadd2, mul2の例を参考に、以下の数式をそれぞれ関数の組み合わせで記述してください。必要な関数は適宜作成してください。
+//code villege 課題６
+//.filterメソッドを使わずに同様の処理を行える物を作る
+
+const words= ['リンゴ', 'ゴリラ', 'ラッパ', 'パンダ', 'ダイハード', 'どげんジャーズ', 'ズーラシア', 'アカウントサービス' ]
+
+// 上記より特定文字数の条件を取り出して新たな配列を作成する
+const wordsFilter = []
+const result = words.forEach( word => {
+  if (word.length >= 5 )
+  wordsFilter.push  (word)
+   
+});
+
+console.log(wordsFilter)
 
 
+// 奇数だけの配列を取り出して新たに作成する
+// [1,2,3,4,5,6] 
+// 偶数だけの配列を作りたい！
+// [2,4,6]
 
-// nは変数で、自由な数値を代入して動作確認して構いません。
+const array = [1, 2, 3, 4, 5, 6]
+const num = []
 
+const filter = array.forEach((val) =>{
+if (val % 2 === 0)
+num.push(val)
 
+})
+console.log(num)
 
-// n * 100 - 5
-
-const add2 = x => x * 100
-const mul2 = x => x - 5
-
-const n = 3
-
-console.log(mul2(add2(n)))
-
-
-
-// (n + 3) * 8 + 3
-
-const add3 = x => (x + 3)
-const mul3 = x => x * 8
-
-
-console.log(add3(mul3(add3(n))))
-
-
-
-// 課題06-1. map
-// 以下のitemsは、週✕日ごとに、なんらかの成績が記録されている配列だとします（配列の配列）。
-// itemsのmapを呼び出して、「各週ごとの成績の合計値」の配列sumsに変換するプログラムを作成してください。
-
-const items = [
-    // 日  月  火  水  木  金  土
-      [14, 93, 89, 51, 85, 59, 33],
-      [69, 27, 40, 76, 25, 21, 55],
-      [55, 60,  3, 28, 49,  5, 91],
-      [19, 56, 92, 66, 53, 80, 13],
-    ]
+//今度はfor文のみで作成してみる
+const array２ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const num2 =[]
+const filterFor = tmp => {
+  for (let i = 0;  i < array2.length ; i++ ){
     
+    if (array２[i] % 2 === 0) {
+      num2.push(tmp)
+    }
+  }  
+}
+console.log(num2)
+
+// 
+
+// 回答
 
 
-    const sums = items.map((item) => {
-
-　　　　　let x =0
-　　　　for(let i = 0; i < 7; i++){
-           x  = x + item[i]
-        }
-
-      return x
 
 
+// const array = [1,2,3,4,5,6];
+// console.log(array.filter(item => {
+//     return item % 2 === 0
+// }))
+// const filter = (callback) => {
+//     const tmp = [];
+//     for (let i = 0; i < array.length; i++ ) {
+//         if (callback(array[i])) {
+//             tmp.push(array[i])
+//         }
+//     }
+//     return tmp
+// }
+// const callback = item => {
+//     return item % 2 === 0
+// }
+// console.log(filter(callback))
 
-    })
-    console.log(sums) //=> [424, 313, 291, 379]
+
