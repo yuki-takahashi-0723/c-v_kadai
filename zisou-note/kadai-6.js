@@ -29,20 +29,33 @@ num.push(val)
 })
 console.log(num)
 
+
+
+
+
+
+
 //今度はfor文のみで作成してみる
-const array２ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const num2 =[]
-const filterFor = tmp => {
-  for (let i = 0;  i < array2.length ; i++ ){
-    
-    if (array２[i] % 2 === 0) {
-      num2.push(tmp)
+const arrays2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const filterFor = (array2) => {
+  const newArrays =[]
+  for (let i = 0; i < arrays2.length; i++){
+    if (array2[i] % 2 === 0 ) {
+      newArrays.push(array2[i])
     }
-  }  
+  }
+  return newArrays
 }
-console.log(num2)
+console.log(filterFor(arrays2))
+
+
+
+
 
 // 
+
+
+
 
 // 回答
 
