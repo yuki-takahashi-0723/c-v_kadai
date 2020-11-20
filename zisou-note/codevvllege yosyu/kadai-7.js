@@ -58,6 +58,82 @@ console.log(array)
 
 
 
+//classの継承に挑戦
+
+class Car {
+    constructor(color,name){
+        this.color = color
+        this.postion = 0
+        this.name = name
+
+    }
+    getInfo(){
+        console.log ('車の色は' + this.color + 'です' )
+    }
+    getName(){
+         console.log('車種は'　+ this.name + 'です')
+    }
+
+    forword(){
+        this.postion += 1
+    }
+     
+    back() {
+        this.postion -= 1
+    }
+ 
+    getPosition () {
+        console.log(this.postion)
+    }
+
+}
+
+const car = new Car('青','ウェイク')
+car.getName()
+car.getInfo()
+car.forword()
+car.forword()
+car.forword()
+car.back()
+car.getPosition()
+
+const car2 = new Car('赤')
+car2.getInfo()
+
+car2.back()
+car2.back()
+car2.back()
+car2.back()
+car2.getPosition()
 
 
-            
+
+
+
+
+
+class PatCar extends Car{
+    constructor(color,name,option,option2){
+        super(color,name)
+       this.option = option
+       this.option2 =option2
+    }
+
+
+    getOption(){
+        console.log('この車両には' + this.option + 'がついてます')
+    }
+    getOption2(){
+        console.log('この車両には'　+ this.option2 + 'がついています')
+    }
+}
+    
+const patcar = new PatCar('白と黒','パトカー','パトランプ','サイレン')
+patcar.getName()
+patcar.getInfo()
+patcar.forword()
+patcar.forword()
+patcar.back()
+patcar.getPosition()
+patcar.getOption()
+patcar.getOption2()
