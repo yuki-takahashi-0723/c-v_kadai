@@ -137,3 +137,80 @@ patcar.back()
 patcar.getPosition()
 patcar.getOption()
 patcar.getOption2()
+
+
+
+class KamenRider{
+ constructor(series,riderName,sens ){
+    this.series = series
+    this.riderName = riderName
+    this.riderSens = sens
+    this.power = 0
+ }
+
+ getSerise(){
+     console.log('この仮面ライダーは' + this.series + 'に出てくる仮面ライダーです')
+ }
+getRider(){
+    console.log('仮面ライダー'　+ this.riderName + this.riderSens + '!ヤベーい!')
+}
+
+powerUprode(power){
+   this.power += power
+}
+
+getPower(){
+    console.log('このライダーの力は' + this.power + 'ポイントだ！')
+}
+
+}
+
+const kamenRider = new KamenRider
+
+//プロパティが変わらない場合は、class Kuga extends KamenRider{
+    // constructor(series, name, sens,job){
+        // super(series, name, sens)
+// }  を省略できる
+
+class Kuga extends KamenRider{}
+const kuga = new Kuga ("クウガ","クウガ","みんなの笑顔を守りたい")
+kuga.getSerise()
+kuga.getRider()
+kuga.powerUprode(2000)
+kuga.getPower()
+
+
+class Ryuki extends KamenRider{}
+const ryuki = new Ryuki ("龍騎","王蛇","イライラする・・・祭りの場所はここか？")
+ryuki.getSerise()
+ryuki.getRider()
+ryuki.powerUprode(2000)
+ryuki.getPower()
+
+
+
+//追加した場合は下記では職業を追加した場合は省略できない
+
+
+
+class Agito extends KamenRider {
+    constructor(series, name, sens,job){
+        super(series, name, sens)
+        this.Job =  job
+    }
+getJob(){
+    console.log('彼の職業は' + this.Job + 'だ！')
+}
+
+
+}
+
+const agito = new Agito("アギト","アナザーアギト","!アギトは私だけでいい",'医者')
+agito.getSerise()
+agito.getRider()
+agito.powerUprode(2000)
+agito.getPower()
+agito.getJob()
+
+
+
