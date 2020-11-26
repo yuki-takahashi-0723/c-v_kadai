@@ -8,9 +8,15 @@ const removeButton = document.getElementById('remove')
 // 追加
 addButton.addEventListener('click', (event) =>{
 const newItem = document.createElement('li')
+const newImg = document.createElement('img')
+const newSpan = document.createElement('span')
 const itemCount = list.children.length + 1
 
-newItem.textContent = '新しいアイテム' +  itemCount
+newImg.setAttribute('src','http://placehold.it/64x64')
+newImg.setAttribute('alt' , '新しいアイテム' + itemCount)
+newSpan.textContent = '新しいアイテム' +  itemCount
+newItem.appendChild(newImg)
+newItem.appendChild(newSpan)
 list.appendChild(newItem)
 })
 
