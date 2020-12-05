@@ -141,9 +141,9 @@ ReactDOM.render(
 //     return (
 // //      <ul>
 //                 <Item />      Listの中にアイテムを配置する
-//                 <Item />
-//                 <Item />
-//         </ul>
+//                 <Item content = {'課題をやる'}/>　　　JSX記法で記述する場合は左記のように記述します
+//                 <Item content 0 {'買い物をする'}/>　　これらはコンパイルされるとItem({content: '課題をする'})のyぷになり単一のオブジェクトとしてコンポーネントに渡される　　　　　　　　　　　　　　
+//         </ul>　　　
 //     )
 // }
 
@@ -158,11 +158,11 @@ ReactDOM.render(
 
 // import React from 'react'
 
-// const Item = () => {
+// const Item = ({content}) => {             Listコンポーネントで渡された値（オブジェクト）は引数のため、それらを使用するために原則仮引数を定義する。一般的にpropsを使用する
 //     return(
 //         <input type='checkbox' />
-//         <span>サンプルテキスト</span>
-//     )
+//         <span>{content}</span>　　引数として渡されたオブジェクトのcontentプロパティを使用する
+//     )                                  ＊jsxで記述する際は、必ず{}でラップする必要があります。
 // }
 
 // export default Item
