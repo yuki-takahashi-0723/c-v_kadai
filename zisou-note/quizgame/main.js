@@ -26,21 +26,21 @@ const quiz = [
     }
 ]
 
-const $getStart = document.getElementById('start')
-const $getReStart = document.getElementById('reStart')
+const $getStart = document.getElementById('start') //スタートボタンを取得する
+const $getReStart = document.getElementById('reStart')　//リスタートボタンを取得する
 
 const $getquiz = document.querySelectorAll('.quiz') //クラスquizを取得する
 
+
 const $getResult = document.getElementById('result')// ID result を取得する
-let quizCount = 0
+let quizCount = 0　　　　　//現在難問目が出題されているかを表す変数
 
 //問題のセットアップ    //テキストをHtmlに反映させる
 
 
  const $setQuiz = ()=>{ 
-                        console.log(quizCount)
+                        // console.log(quizCount)
                         document.getElementById('problem').textContent = quiz[quizCount].quwstion
-                        
                         
                         for (let j = 0 ; j<quiz[quizCount].select.length; j++)
                         {
@@ -49,38 +49,38 @@ let quizCount = 0
                     // console.log(quizCount)
 }
 
+const $next = () =>{
+    quizCount++
+    console.log('aaaaaaaaaa')
+    if(quizCount <  quiz.length){
+        $setQuiz()
+       
+      }else{
+        
+         document.getElementById('endColl').textContent = 'これでクイズは終了です！'
+         for(let k =0; k<quiz[k].select.length;k++){
+            $getquiz[k].style.display ='none';
+            $getReStart.style.display = 'block'
+         }      
+        }
+       
+    
+}
 
 
-    const $setSelect = () =>{
-        for (let i = 0 ; i < quiz[quizCount].select.length; i++){
-            
-            $getquiz[i].addEventListener('click', ()=>{
-               
-                if(quiz[quizCount].select[i]===quiz[quizCount].answer){
-                    // console.log('正解')
+    const $setSelect = (elm) =>{
+                if ( elm.textContent === quiz[quizCount].answer){
+                    console.log('正解')
                     $getResult.textContent = '正解' 
                 }else{
                     $getResult.textContent = '不正解' 
-                } 
-                quizCount++
+                }
+                
+            
+            $next()             
+            }
              
-                // console.log(quizCount)
-               
-                if(quizCount <  quiz.length){
-                    $setQuiz()
-                  }else{
-                    document.getElementById('endColl').style.display = 'block'
-                     document.getElementById('endColl').textContent = 'これでクイズは終了です！'
-                     for(let k =0; k<quiz[k].select.length;k++){
-                        $getquiz[k].style.display ='none';
-                        $getReStart.style.display = 'block'
-                     }      
-                    }
-                  }
-              )
-          }
-      }
-
+                  
 const $displayLoop = (tmp) =>{
     for(let a =0; a<quiz[a].select.length;a++)
     {
@@ -89,30 +89,34 @@ const $displayLoop = (tmp) =>{
 }
 
 
+
+const $AllSet = () =>{
+        for( let i = 0; i < quiz[quizCount].select.length;i++ ){
+            
+            $getquiz[i].addEventListener('click',(e) =>
+            {
+                $setSelect(e.target)
+            })
+        }
+}
+
+
+
+
 $getReStart.style.display ='none'
 $displayLoop('none')
-$getStart.addEventListener('click',() =>
-    {
-        $getResult.style.display = 'block'
-        $getResult.textContent ='正解と不正解はここに出ます'
-        document.getElementById('problem').style.display ='block'
-        quizCount = 0
-        $setQuiz()
-        $getStart.style.display = 'none'
-        $displayLoop('block')
-        
-    })
+$getStart.addEventListener('click', ()=>{
+    $getStart.style.display = 'none'
+    $displayLoop('block')
+    $setQuiz()
+})
 
+$AllSet()
 
-$setSelect()
 
 $getReStart.addEventListener('click',()=>{
-    $getReStart.style.display= 'none'
-    $getResult.style.display = 'none'
     $getStart.style.display = 'block'
-    document.getElementById('problem').style.display =('none')
-    document.getElementById('endColl').style.display = 'none'
-    
+    quizCount = 0
     })
 
 
