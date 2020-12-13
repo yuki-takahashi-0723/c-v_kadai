@@ -1,12 +1,18 @@
 import React,{useState} from 'react'
 
-const Form = () =>{
+const Form = ({todos,setTodos}) =>{
     const [value, setValue] = useState('')
 
 
     const handleSubmit = e =>{
         e.preventDefault()
-        console.log('value: ', value)
+        setTodos([
+            ...todos,
+            {
+                content : value
+            }
+        ])
+        
     }
     return (
         <form onSubmit = {handleSubmit} >

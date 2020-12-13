@@ -3,38 +3,35 @@ import React from 'react'
 
 
 const Form = () =>{
-    const [text, setText] = React.useState(false)
+    const [text, setText] = React.useState('')
     const answer = () =>{
     const userPoint = Math.floor(Math.random()*100)
    　console.log(userPoint)
         if(userPoint<=10){
-            console.log('大吉')
-            return  '大吉'
+            setText ('大吉')
         }else if(userPoint<=30){
             console.log('中吉')
-            return  '中吉'
+            setText ('中吉')
         }else if(userPoint<=60){
-            return '吉'
+            setText('吉')
         }else if(userPoint<=80){
-            return '小吉'
+            setText ('小吉')
         }else if(userPoint<=90){
-            return '末吉'
+            setText ('末吉')
         }else{
-            return '凶'
+            setText ('凶')
         }
     }
     
     return(
         <>
-        <button　onClick = {() => {setText(!text)}}>
+        <button　onClick = {answer}>
             おみくじを引こう！
             </button>
-    <h2 style={
-        {display: text ? 'inline':'none'}
-       }>
-          <br></br> 今日の運勢は {answer()}！
+            {text && (
+                <h2>今日の運勢は {text}</h2>
+            )}
     
-    </h2>
            
         </>
     )
