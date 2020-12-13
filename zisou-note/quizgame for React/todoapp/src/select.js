@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Select = ({quizs,userSelect}) => {
-const [quizSelect,setQuizSelect] = useState('')
+const Select = ({quizs,judge}) => {
+
     const handleButton = (e) =>{
-            setQuizSelect(e.target.innerHTML)
-            console.log(quizSelect)
-            userSelect(quizSelect)
+            judge(e.target.innerHTML)
+            
           
         
     }

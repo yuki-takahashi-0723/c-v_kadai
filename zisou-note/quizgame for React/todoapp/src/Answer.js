@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Answer = () =>{
+const Answer = ({content}) =>{
     
     return(
-    <p>結果はダイアログボックスに出ます</p>
+        <>
+            <p>前回のクイズ結果が下に表示されます</p>
+            <h2>{content}</h2>
+        </>
     )
 }
 
